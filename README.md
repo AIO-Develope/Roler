@@ -20,7 +20,7 @@ Syntax:
 
 # How to install
 
-```bash
+```
 install python 3.10.6
 ```
 install required packages
