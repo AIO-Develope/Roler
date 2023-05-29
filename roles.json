@@ -1,0 +1,12 @@
+{
+    "chef_roles": {
+      "chef1": 123456789
+    },
+    "roles": {
+      "role1": 123456789
+    },
+    "assignable_roles": {
+      "chef1": ["role1"]
+    }
+  }
+  
