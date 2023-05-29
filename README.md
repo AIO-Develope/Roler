@@ -18,17 +18,12 @@ Syntax:
 
 <img src="https://raw.githubusercontent.com/AIO-Develope/roler/main/images/cmd.PNG" width="40%" height="40%"/>
 
-# ToDo
+# How to install
 
-Wave Animation
-- ✅ prototype
-- ✅ ui design
-- ✅ ui functions
-- ❌ copy text button
-- ❌ preview
-
-Blink Animation
-- ❌ prototype
-- ❌ ui design
-- ❌ ui functions
-- ❌ preview
+```bash
+install python 3.10.6
+```
+install required packages
+```
+pip install -r requirements.txt
+```
