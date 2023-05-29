@@ -20,9 +20,9 @@ Syntax:
 
 # How to install
 
-```
-install python 3.10.6
-```
+
+1. install python 3.10.6
+
 install required packages
 ```
 pip install -r requirements.txt
