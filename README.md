@@ -20,8 +20,7 @@ Syntax:
 
 # How to install
 
-
-1. install python 3.10.6
+install python 3.10.6
 
 install required packages
 ```
