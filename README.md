@@ -22,7 +22,7 @@ Syntax:
 
 1. install python 3.10.6
 
-install required packages
+2. install required packages
 ```
 pip install -r requirements.txt
 ```
