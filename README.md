@@ -57,6 +57,6 @@ pip install -r requirements.txt
 python main.py
 ```
 
-#Info
+# Info
 
 This project is pretty new, its more like a pre alpha but its working.
