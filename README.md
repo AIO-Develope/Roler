@@ -16,7 +16,7 @@ This is a Discord bot implemented using the Discord.py library. The bot is desig
 Syntax:
 
 
-<img src="https://user-images.githubusercontent.com/69240351/160253839-3be65fdf-f4f4-4d4d-95d4-d12abbe93c8d.gif" width="40%" height="40%"/>
+<img src="[https://user-images.githubusercontent.com/69240351/160253839-3be65fdf-f4f4-4d4d-95d4-d12abbe93c8d.gif](https://raw.githubusercontent.com/AIO-Develope/roler/main/images/cmd.PNG)" width="40%" height="40%"/>
 
 # ToDo
 
