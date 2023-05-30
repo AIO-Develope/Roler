@@ -58,5 +58,6 @@ python main.py
 ```
 
 # Info
+i made this bot on behalf of a discord project
 
 This project is pretty new, its more like a pre alpha but its working.
