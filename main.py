@@ -128,7 +128,7 @@ async def role(ctx, aktion, rolle: str = None, member: discord.Member = None):
     )
 
     if not rolle or not member:
-        error_embed.description = 'Fehlende Parameter. Bitte verwende den Befehl wie folgt: `!role add/remove [Rollenname] @[Mitglied]`.'
+        error_embed.description = 'Fehlende Parameter. Bitte verwende den Befehl wie folgt: `/role add/remove [Rollenname] @[Mitglied]`.'
         await ctx.send(embed=error_embed)
         return
 
@@ -137,19 +137,20 @@ async def role(ctx, aktion, rolle: str = None, member: discord.Member = None):
         await ctx.send(embed=error_embed)
         return
 
-    if rolle.lower() not in roles:
+    if rolle not in roles:  # Check if the rolle exists in the roles dictionary
         error_embed.description = 'Ungültige Rolle. Bitte gib eine gültige Rolle an.'
         await ctx.send(embed=error_embed)
         return
 
+    role_id = roles[rolle]  # Get the role ID from the roles dictionary using the rolle name as the key
+
     try:
-        role_id = roles[rolle.lower()]
         role_obj = ctx.guild.get_role(role_id)
 
         if aktion.lower() == 'add':
             for chef_role, assignable_role_list in assignable_roles.items():
                 if ctx.author.top_role.id == chef_roles[chef_role]:
-                    if role_id in [roles.get(assignable_role.lower()) for assignable_role in assignable_role_list]:
+                    if role_id in [roles.get(assignable_role) for assignable_role in assignable_role_list]:
                         await member.add_roles(role_obj)
                         success_embed = discord.Embed(
                             title='Rolle hinzugefügt',
@@ -169,7 +170,7 @@ async def role(ctx, aktion, rolle: str = None, member: discord.Member = None):
         elif aktion.lower() == 'remove':
             for chef_role, assignable_role_list in assignable_roles.items():
                 if ctx.author.top_role.id == chef_roles[chef_role]:
-                    if role_id in [roles.get(assignable_role.lower()) for assignable_role in assignable_role_list]:
+                    if role_id in [roles.get(assignable_role) for assignable_role in assignable_role_list]:
                         await member.remove_roles(role_obj)
                         success_embed = discord.Embed(
                             title='Rolle entfernt',
@@ -194,5 +195,8 @@ async def role(ctx, aktion, rolle: str = None, member: discord.Member = None):
             color=discord.Color.red()
         )
         await ctx.send(embed=unknown_error_embed)
+
+
+
 
 bot.run(TOKEN)
